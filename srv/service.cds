@@ -2,6 +2,8 @@ using { Salesorders as my } from '../db/schema.cds';
 
 using { API_SALES_ORDER_SRV.A_SalesOrder } from './external/API_SALES_ORDER_SRV';
 
+using { northwind.Customers } from './external/northwind';
+
 @path : '/service/SalesordersService'
 service SalesordersService
 {
@@ -17,6 +19,17 @@ service SalesordersService
             SalesOrderDate,
             TotalNetAmount,
             OverallDeliveryStatus
+        };
+
+    entity Customers1 as
+        projection on Customers
+        {
+            CustomerID,
+            CompanyName,
+            ContactName,
+            City,
+            Country,
+            Phone
         };
 }
 
