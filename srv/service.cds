@@ -14,22 +14,22 @@ service SalesordersService
     entity A_SalesOrder1 as
         projection on A_SalesOrder
         {
-            SalesOrder,
-            SoldToParty,
-            SalesOrderDate,
-            TotalNetAmount,
-            OverallDeliveryStatus
+            SalesOrder as salesOrder,
+            SoldToParty as customerId,
+            SalesOrderDate as salesOrderDate,
+            TotalNetAmount as totalAmount,
+            OverallDeliveryStatus as status
         };
 
     entity Customers1 as
         projection on Customers
         {
-            CustomerID,
-            CompanyName,
-            ContactName,
-            City,
-            Country,
-            Phone
+            CustomerID as customerId,
+            CompanyName as companyName,
+            ContactName as contactName,
+            City as city,
+            Country as country,
+            Phone as phone
         };
 }
 

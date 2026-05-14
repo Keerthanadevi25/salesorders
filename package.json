@@ -41,19 +41,20 @@
       },
       "northwind": {
         "kind": "odata-v2",
-        "model": "srv/external/northwind"
+        "model": "srv/external/northwind",
+        "credentials": {
+        "url": "https://services.odata.org/Northwind/Northwind.svc"
+      }
       },
       "API_SALES_ORDER_SRV": {
         "kind": "odata-v2",
         "model": "srv/external/API_SALES_ORDER_SRV",
-        "[sandbox]":{
           "credentials":{
             "url":"https://sandbox.api.sap.com/s4hanacloud/sap/opu/odata/sap/API_SALES_ORDER_SRV",
             "headers":{
-              "apikey":"hzBkLo031A4MyIc4L78FjDeHEpHlAXll"
+              "apikey":"hzBkLo031A4MyIc4L78FjDeHEpHlAXll"      
             }
-          }
-        }
+          }      
       }
     }
   },
