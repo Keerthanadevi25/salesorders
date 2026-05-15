@@ -10,27 +10,14 @@ service SalesordersService
     @odata.draft.enabled
     entity Mappingcustomers as
         projection on my.Mappingcustomers;
-
-    entity A_SalesOrder1 as
-        projection on A_SalesOrder
-        {
-            SalesOrder as salesOrder,
-            SoldToParty as customerId,
-            SalesOrderDate as salesOrderDate,
-            TotalNetAmount as totalAmount,
-            OverallDeliveryStatus as status
-        };
+    entity Customers2 as
+        projection on my.Customers2;
+  entity A_SalesOrder1 as
+        projection on A_SalesOrder;      
 
     entity Customers1 as
-        projection on Customers
-        {
-            CustomerID as customerId,
-            CompanyName as companyName,
-            ContactName as contactName,
-            City as city,
-            Country as country,
-            Phone as phone
-        };
+        projection on Customers;
+        
 }
 
 annotate SalesordersService with @requires :
