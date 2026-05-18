@@ -13,7 +13,8 @@ service SalesordersService
     entity Customers2 as
         projection on my.Customers2;
   entity A_SalesOrder1 as
-        projection on A_SalesOrder;      
+        projection on my.A_SalesOrder1;      
+
 
     entity Customers1 as
         projection on Customers;

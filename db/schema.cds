@@ -37,7 +37,7 @@ entity Customers1 as
             country: String;
             phone: String;
             s4CustomerId : String;
-            orders : Association to many A_SalesOrder1;
+            orders : Association to many A_SalesOrder1 on orders.customerId = s4CustomerId;
         };
 
     

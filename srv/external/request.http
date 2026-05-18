@@ -1,0 +1,25 @@
+GET http://localhost:46207/service/fromABAPtoCAPSvcs/$metadata
+
+
+### GET mapping Customers
+GET http://localhost:46207/service/SalesordersService/Mappingcustomers
+
+
+### GET Northwind Customers
+GET http://localhost:46207/service/SalesordersService/A_Customers1
+
+
+### GET S4 Sales Orders
+GET http://localhost:46207/service/SalesordersService/A_SalesOrder1
+
+### GET mapping Customers
+GET http://localhost:4004/service/SalesordersService/Customers2?$filter=customerId eq 'ALFKI'&$expand=orders
+
+
+
+### GET Customers
+GET http://localhost:4004/service/SalesordersService/Customers2('ALFKI')?$expand=orders
+
+
+### GET Customers
+GET http://localhost:46207/service/SalesordersService/Customers2('BONAP')/orders
